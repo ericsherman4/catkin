@@ -1,5 +1,8 @@
 <launch>
 
 <node pkg="rover_publishers" type="better_jetson_comms.py" name="jetson_comms" output="screen"/>
+<node pkg="rover_publishers" type="mapDataPublishers.py" name="mapDataPublisher" output="screen">
+<node pkg="rover_publishers" type="reactiveCameraFeed.py" name="reactiveCameraFeed" output="screen">
+<node pkg="rover_publishers" type="cameraPositionPublisher.py" name="cameraPositionPublisher" output="screen">
 
 </launch>

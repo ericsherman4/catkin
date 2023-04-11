@@ -10,6 +10,10 @@ project(rover_publishers)
 find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
+  rtabmap_ros
+  sensor_msgs
+  std_msgs
+  visualization_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -136,6 +140,9 @@ include_directories(
 
 catkin_install_python(PROGRAMS
   src/better_jetson_comms.py
+  src/mapDataPublishers.py
+  src/reactiveCameraPublisher.py
+  src/cameraPositionPublisher.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
